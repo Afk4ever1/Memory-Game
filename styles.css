@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* start game filter */
+.starting_filter {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgba(0, 187, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start_button {
+  height: 70px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  font-size: 30px;
+  color: #fff;
+  background-color: rgb(255, 94, 0);
+  cursor: pointer;
+}
+/* Info container styling */
+.info_container {
+  font-size: 24px;
+  width: 820px;
+  margin: 10px auto;
+  border: 2px solid rgb(0, 242, 255);
+  overflow: hidden;
+  padding: 10px 20px;
+}
+.name {
+  float: left;
+  width: 35%;
+}
+.tries {
+  float: right;
+  width: 35%;
+  text-align: right;
+}
+.timer {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+/* End of Info container styling  */
+.cards_container {
+  width: 840px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto;
+  padding: 20px;
+}
+.cards_container .card {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 5px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+  border: 5px solid rgb(0, 242, 255);
+}
+.cards_container .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.cards_container .card .front {
+  background-color: #333;
+  line-height: 150px;
+}
+.cards_container .card .front::before {
+  content: "!";
+  font-size: 120px;
+  font-weight: bolder;
+  color: #fff;
+}
+.cards_container .card .back {
+  background-color: #00b3b6;
+  transform: rotateY(180deg);
+}
+.cards_container .card .back img {
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+}
+.cards_container .card.flip {
+  transform: rotateY(180deg);
+}
+.cards_container .card.matched {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.cards_container.unclickable {
+  pointer-events: none;
+}
+.end {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(11, 22, 27, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.end .timeToSolve,
+.end .tiresToSolve {
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 20px;
+}
+.restart_button {
+  height: 100px;
+  width: 300px;
+  font-size: 50px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  background-color: rgb(255, 94, 0);
+  cursor: pointer;
+  margin: 20px;
+}
+
+@media (max-width: 840px) {
+  .info_container {
+    width: 620px;
+    margin: 10px auto;
+  }
+  .cards_container {
+    width: 640px;
+  }
+  .cards_container .card {
+    width: 100px;
+    height: 100px;
+  }
+  .starting_filter {
+    width: 100%;
+  }
+  .cards_container .card .front::before {
+    content: "!";
+    font-size: 80px;
+  }
+  .cards_container .card .front {
+    line-height: 95px;
+  }
+  .cards_container .card .back img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 640px) {
+  .info_container {
+    width: 420px;
+    font-size: 16px;
+    margin: 10px auto;
+  }
+  .cards_container {
+    width: 440px;
+  }
+  .cards_container .card {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }
+  .starting_filter {
+    width: 100%;
+    height: 100%;
+  }
+  .cards_container .card .front::before {
+    content: "!";
+    font-size: 80px;
+  }
+  .cards_container .card .front {
+    line-height: 85px;
+  }
+  .cards_container .card .back img {
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+  }
+  .end {
+    width: 100%px;
+    height: 100%;
+  }
+  .end .timeToSolve,
+  .end .tiresToSolve {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  .restart_button {
+    height: 80px;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(255, 94, 0);
+    cursor: pointer;
+    margin: 20px;
+  }
+}
+@media (max-width: 440px) {
+  .info_container {
+    width: 320px;
+    font-size: 20px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+  }
+  .cards_container {
+    width: 340px;
+    padding: 0;
+    margin: 20px auto;
+  }
+  .cards_container .card {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+  }
+  .starting_filter {
+    width: 100%;
+    height: 100%;
+  }
+  .cards_container .card .front::before {
+    content: "!";
+    font-size: 70px;
+  }
+  .cards_container .card .front {
+    line-height: 70px;
+  }
+  .cards_container .card .back img {
+    width: 55px;
+    height: 55px;
+    margin-top: 5px;
+  }
+  .end {
+    width: 100%;
+    height: 100%;
+  }
+  .end .timeToSolve,
+  .end .tiresToSolve {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  .restart_button {
+    height: 80px;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(255, 94, 0);
+    cursor: pointer;
+    margin: 20px;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="starting_filter">
+        <button class="start_button" onclick="removeFilter()">
+          Start Game
+        </button>
+      </div>
+      <div class="info_container">
+        <div class="name">Hello: <span class="player_name"></span></div>
+        <div class="timer">00:00</div>
+        <div class="tries">Wrong Tries: <span class="wrong_tries">0</span></div>
+      </div>
+      <div class="cards_container">
+        <div class="card" data-logo="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Angular.png" alt="angular logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Angular.png" alt="angular logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="css3">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/CSS3.png" alt="css3 logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="css3">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/CSS3.png" alt="css3 logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="html5">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/HTML5.png" alt="html5 logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="html5">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/HTML5.png" alt="html5 logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/GitHub.png" alt="github logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/GitHub.png" alt="github logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="jest">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Jest.png" alt="jest logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="jest">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Jest.png" alt="jest logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="npm">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Npm.png" alt=" logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="npm">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Npm.png" alt=" logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="postgre">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/PostgreSQL.png" alt="postgre sql logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="postgre">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/PostgreSQL.png" alt="postgre sql logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="python">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Python.png" alt="python logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="python">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/Python.png" alt="python logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/React.png" alt="react logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/React.png" alt="react logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="vuejs">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/VueJs.png" alt="vue js logo" />
+          </div>
+        </div>
+        <div class="card" data-logo="vuejs">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="./imgs/VueJs.png" alt="vue js logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jQuery.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
